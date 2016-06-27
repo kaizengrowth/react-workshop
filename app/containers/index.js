@@ -1,1 +1,2 @@
-export Game from './Game'
+export ShinySpacePirates from './ShinySpacePirates'
+export CharacterSheet from './CharacterSheet'

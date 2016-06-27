@@ -1,10 +1,11 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import { Game } from './containers'
+import { ShinySpacePirates, CharacterSheet } from './containers'
 import { Welcome } from './views'
 
 export default (
-  <Route path='/' component={Game}>
+  <Route path="/" component={ShinySpacePirates}>
     <IndexRoute component={Welcome} />
+    <Route path="character-sheet" component={CharacterSheet} />
   </Route>
 )
