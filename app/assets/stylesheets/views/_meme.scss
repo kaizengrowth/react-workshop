@@ -1,0 +1,33 @@
+#meme {
+  color: $white;
+  text-transform: uppercase;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 54px;
+  margin-top: 1rem;
+  text-shadow:
+    -1px -1px 0 $black,
+    1px -1px 0 $black,
+    -1px 1px 0 $black,
+    1px 1px 0 $black;
+
+  blockquote {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+
+    &#top-line {
+      top: 0;
+    }
+
+    &#bottom-line {
+      bottom: 0;
+    }
+  }
+
+  .-wrapper {
+    float: left;
+    position: relative;
+  }
+}
