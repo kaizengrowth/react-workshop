@@ -1,0 +1,17 @@
+#welcome {
+  .status {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-family: Circular;
+
+    &.not-saved {
+      background: $red-1;
+      color: $white;
+    }
+
+    &.saved {
+      background: $mint-1;
+      color: $white;
+    }
+  }
+}
