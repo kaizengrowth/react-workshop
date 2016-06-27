@@ -1,0 +1,25 @@
+$font-host: "//ga-static-assets-s3.global.ssl.fastly.net/fonts/" !default;
+
+@mixin font-face($font-name, $file, $weight: normal, $style: normal) {
+  font-family: $font-name;
+  font-weight: $weight;
+  font-style: $style;
+  src: url($font-host + $file + '.eot');                                    /* IE9 Compat Modes */
+  src: url($font-host + $file + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font-host + $file + '.woff') format('woff'),                    /* Pretty Modern Browsers */
+       url($font-host + $file + '.ttf') format('truetype');                 /* Safari, Android, iOS */
+}
+
+@font-face { @include font-face("PF Din", "pfdin/pfdintextcomppro-bold-webfont", bold); }
+
+@font-face { @include font-face("Circular", "circular/lineto-circular-book"); }
+@font-face { @include font-face("Circular", "circular/lineto-circular-bookitalic", normal, italic); }
+
+@font-face { @include font-face("Circular", "circular/lineto-circular-black", 800); }
+@font-face { @include font-face("Circular", "circular/lineto-circular-blackitalic", 800, italic); }
+
+@font-face { @include font-face("Circular", "circular/lineto-circular-bold", bold); }
+@font-face { @include font-face("Circular", "circular/lineto-circular-bolditalic", bold, italic); }
+
+@font-face { @include font-face("Circular", "circular/lineto-circular-medium", 500); }
+@font-face { @include font-face("Circular", "circular/lineto-circular-mediumitalic", 500, italic); }

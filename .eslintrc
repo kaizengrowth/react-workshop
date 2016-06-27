@@ -1,0 +1,15 @@
+{
+  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    node: true
+  },
+  plugins: [ 'react' ],
+  extends: [ 'eslint:recommended', 'plugin:react/recommended' ],
+  globals: { $: true, _: true },
+  rules: {
+    comma-dangle: 'off',
+    no-case-declarations: 'off',
+    no-unused-vars: 'warn'
+  }
+}
