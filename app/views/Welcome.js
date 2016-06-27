@@ -6,31 +6,26 @@ export default class Welcome extends Component {
     return <section id="welcome" className="content-area">
       <div className="g-row">
         <div className="g-column small-12">
-          <h1>Shiny Space Pirates</h1>
-          <p>Welcome to the universe!</p>
+          <h1>React Training</h1>
+          <p>This workshop contains five exercises:</p>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Action</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Edit your <Link to="/character-sheet">Character Sheet</Link></td>
-                <td>
-                  <span className="status not-saved">Not Saved</span>
-                </td>
-              </tr>
-              <tr>
-                <td>Build your own <Link to="/spaceship">Spaceship</Link></td>
-                <td>
-                  <span className="status not-saved">Not Saved</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <ol>
+            <li>
+              <Link to="/hello-world">Hello World</Link>
+            </li>
+            <li>
+              <Link to="/meme-generator">Meme Generator</Link>
+            </li>
+            <li>
+              <Link to="/beer-list">Beer List</Link>
+            </li>
+            <li>
+              <Link to="/tip-calculator">Tip Calculator</Link>
+            </li>
+            <li>
+              <Link to="/shopping-list">Shopping List</Link>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
