@@ -1,0 +1,1 @@
+export { drinkBeer } from './Bartender'
