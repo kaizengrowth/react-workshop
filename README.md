@@ -17,7 +17,7 @@
 3. Clone this repo and `cd` into the directory
 
   ```shell
-  git clone git@github.com:generalassembly/instruction.git && cd ./instruction
+  git clone git@github.com:generalassembly/react-workshop.git && cd ./react-workshop
   ```
 
 4. Install dependencies with `npm install`
