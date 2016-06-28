@@ -17,13 +17,13 @@ export default class Welcome extends Component {
               <Link to="/meme-generator">Meme Generator</Link>
             </li>
             <li>
-              <Link to="/beer-list">Beer List</Link>
-            </li>
-            <li>
               <Link to="/tip-calculator">Tip Calculator</Link>
             </li>
             <li>
-              <Link to="/shopping-list">Shopping List</Link>
+              <Link to="/beer-list">Beer List</Link>
+            </li>
+            <li>
+              <Link to="/bartender">Bartender</Link>
             </li>
           </ol>
         </div>

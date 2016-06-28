@@ -17,16 +17,16 @@ export default class Masthead extends Component {
         title: '2. Meme Generator',
       },
       {
-        path: '/beer-list',
-        title: '3. Beer List',
-      },
-      {
         path: '/tip-calculator',
-        title: '4. Tip Calculator',
+        title: '3. Tip Calculator',
       },
       {
-        path: '/shopping-list',
-        title: '5. Shopping List',
+        path: '/beer-list',
+        title: '4. Beer List',
+      },
+      {
+        path: '/bartender',
+        title: '5. Bartender',
       },
     ]
   }

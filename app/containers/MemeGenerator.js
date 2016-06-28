@@ -5,6 +5,10 @@ import { Meme } from '../views'
 // 1. Hookup meme display to use quotes array
 // 2. Make the initial meme text displayed on page load randomly selected
 // 3. Hook up a "Refresh" button to render a new random component
+//
+// ----   Extra   ----
+// 4. Change Meme component over to take a "quote" object instead of a top and bottom line
+// 5. Update Meme to use a PropTypes.shape() for the quote object
 // ===================
 
 const quotes = [

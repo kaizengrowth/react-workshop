@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 // ==== Challenge ====
 // ===================
 
-export default class ShoppingList extends Component {
+export default class Bartender extends Component {
   render() {
     return <section id="shopping-list" className="content-area">
       <div className="g-row">
         <div className="g-column small-12">
-          <h1>Shopping List</h1>
+          <h1>Bartender</h1>
         </div>
       </div>
     </section>
