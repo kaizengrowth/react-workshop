@@ -1,1 +1,1 @@
-export { drinkBeer } from './Bartender'
+export { setBeer, drinkBeer } from './Bartender'

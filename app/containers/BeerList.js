@@ -3,6 +3,7 @@ import { casesOfBeer } from '../helpers'
 
 // ==== Challenge ====
 // 1. Brainstorm a better user experience for filter visibilty
+// 2. Check the appropriate radio button for each filter
 // 3. Compute the total quantity of bottles or cans for each case
 // 4. Update the output row to display the size (ex: 12oz)
 // 5. Implement the type and subtype filters

@@ -1,19 +1,7 @@
 import React, { Component } from 'react'
 import { Meme } from '../views'
 
-// ==== Challenge ====
-// 1. Hookup meme display to use quotes array
-// 2. Make the initial meme text displayed on page load randomly selected
-// 3. Hook up a "Refresh" button to render a new random component
-//
-// ----   Extra   ----
-// 4. Change Meme component over to take a "quote" object instead of a top and bottom line
-// 5. Update Meme to use a PropTypes.shape() for the quote object
-// ===================
-
 const quotes = [
-  { topLine: 'Not sure if song skipping',
-    bottomLine: 'Or remix' },
   { topLine: 'Not sure if password wrong',
     bottomLine: 'Or username wrong' },
   { topLine: 'Not sure if highbeams',
@@ -26,17 +14,27 @@ const quotes = [
     bottomLine: 'Or out of meme ideas' },
 ]
 
+function randomNumberBetween(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min
+}
+
 export default class MemeGenerator extends Component {
   state = {
     selectedQuote: 0,
   }
 
   componentWillMount() {
-    console.log('componentWillMount')
+    this.setRandomQuote()
+  }
+
+  setRandomQuote() {
+    const selectedQuote = randomNumberBetween(0, quotes.length)
+    this.setState({ selectedQuote })
   }
 
   render() {
-    console.log('render')
+    const { selectedQuote } = this.state
+    const { topLine, bottomLine } = quotes[selectedQuote]
 
     return <section id="meme-generator" className="content-area">
       <div className="g-row">
@@ -45,11 +43,12 @@ export default class MemeGenerator extends Component {
 
           <button
             className="button"
+            onClick={() => this.setRandomQuote()}
           >Refresh</button>
 
           <Meme
-            topLine="Not sure if song is skipping"
-            bottomLine="or remix"
+            topLine={topLine}
+            bottomLine={bottomLine}
           />
         </div>
       </div>

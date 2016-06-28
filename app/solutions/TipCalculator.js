@@ -1,17 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 
-// ==== Challenge ====
-// 1. Hook up changing the total
-// 2. Implement computing the tip
-// 3. Ensure checked value changes as tip changes
-// 4. Round the tip output to two decimal places
-//
-// ----   Extra   ----
-// 5. Make the filters work more like the total
-// 6. Make initially selected tip based on the initial state object
-// 7. Don't break if the user uses a comma in the amount
-// ===================
-
 export default class TipCalculator extends Component {
   state = {
     total: 0,
@@ -19,20 +7,15 @@ export default class TipCalculator extends Component {
   }
 
   handleTotalChange(event) {
-    // TODO: handle total changed
-    console.log('total changed to', event.target.value)
+    const total = Number.parseInt(event.target.value.replace(',', ''))
+    this.setState({ total })
   }
 
   render() {
     const { tipPercent, total } = this.state
     const percentage = (tipPercent / 100)
 
-    console.log('tipPercent', tipPercent)
-    console.log('total', total)
-    console.log('percentage', percentage)
-
-    // TODO: Implement this...
-    const tipAmount = 0
+    const tipAmount = (total * percentage).toFixed(2)
 
     return <section id="tip-calculator" className="content-area">
       <div className="g-row">
@@ -51,19 +34,21 @@ export default class TipCalculator extends Component {
                 <input
                   type="radio" name="tipAmount" value="10%"
                   onChange={() => this.setState({ tipPercent: 10 })}
-                  checked
+                  checked={tipPercent === 10}
                 /> 10%
               </label>
               <label>
                 <input
                   type="radio" name="tipAmount" value="15%"
                   onChange={() => this.setState({ tipPercent: 15 })}
+                  checked={tipPercent === 15}
                 /> 15%
               </label>
               <label>
                 <input
                   type="radio" name="tipAmount" value="20%"
                   onChange={() => this.setState({ tipPercent: 20 })}
+                  checked={tipPercent === 20}
                 /> 20%
               </label>
             </fieldset>

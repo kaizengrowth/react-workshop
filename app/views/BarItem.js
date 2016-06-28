@@ -18,6 +18,16 @@ export default class BarItem extends Component {
     }).isRequired,
   }
 
+  handleClick = () => {
+    const { onDrink } = this.props
+
+    if (!onDrink) {
+      return
+    }
+
+    onDrink()
+  }
+
   render() {
     const { caseOf, totalRemaining } = this.props
 
@@ -25,7 +35,7 @@ export default class BarItem extends Component {
       return <li>ERROR: Not properly implemented</li>
     }
 
-    return <li>
+    return <li key={caseOf.name}>
       {totalRemaining}x <strong>{caseOf.name}</strong>
 
       <button
